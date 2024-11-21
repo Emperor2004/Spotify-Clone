@@ -39,7 +39,7 @@ const ListAlbum = () => {
       <p>All Albums List</p>
       <br />
       <div>
-        <div className='sm:grid hidden grid-cols-[1.25fr_2fr_2fr_1fr_1fr] items-center gap-2.5 p-3 border border-gray-300 text-sm mr-5 bg-gray-100'>
+        <div className='sm:grid hidden grid-cols-[0.5fr_1fr_2fr_1fr_0.5fr] items-center gap-2.5 p-3 border border-gray-300 text-sm mr-5 bg-gray-100'>
           <b>Image</b>
           <b>Name</b>
           <b>Description</b>
@@ -49,12 +49,12 @@ const ListAlbum = () => {
         {data.map((item, index) => {
 
           return (
-            <div key={item._id || index} className='grid grid-flow-col grid-col-[1fr_1fr_1fr] sm:grid-col-[0.5fr_1fr_2fr_1fr_0.5fr] items-center gap-2.5 p-3 border border-gray-300 text-sm mr-5'>
+            <div key={item._id || index} className='grid grid-cols-[1fr_1fr_1fr] sm:grid-cols-[0.5fr_1fr_2fr_1fr_0.5fr] items-center gap-2.5 p-3 border border-gray-300 text-sm mr-5'>
               <img className='w-12' src={item.image} alt="" />
               <p>{item.name}</p>
               <p>{item.desc}</p>
               <input type="color" value={item.bgColour}/>
-              <p className='cursor-pointer hover:text-red-500 scale-150' onClick={() => removeAlbum(item._id)} >x</p>
+              <p className='cursor-pointer hover:text-red-500 text-2xl' onClick={() => removeAlbum(item._id)} >x</p>
             </div>
           )
         })}

@@ -92,11 +92,11 @@ const AddSong = () => {
         </div>
         <div className='flex flex-col gap-2.5'>
             <p>Song Name</p>
-            <input onChange={(e) => setName(e.target.value)} value={name} type="text" className='bg-transparent outline-green-600 border-2 border-gray-400 p-2.5 w-[max(40vm, 250px)]' placeholder='Type Here' required />
+            <input onChange={(e) => setName(e.target.value)} value={name} type="text" className='bg-transparent outline-green-600 border-2 border-gray-400 p-2.5 sm:w-[200%] w-auto' placeholder='Type Here' required />
         </div>
         <div className='flex flex-col gap-2.5'>
             <p>Song Description</p>
-            <input onChange={(e) => setDesc(e.target.value)} value={desc} type="text" className='bg-transparent outline-green-600 border-2 border-gray-400 p-2.5 w-[max(40vm, 250px)]' placeholder='Type Here' required />
+            <input onChange={(e) => setDesc(e.target.value)} value={desc} type="text" className='bg-transparent outline-green-600 border-2 border-gray-400 p-2.5 sm:w-[200%] w-auto' placeholder='Type Here' required />
         </div>
 
         <div className='flex flex-col gap-2.5'>

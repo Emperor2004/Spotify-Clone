@@ -33,7 +33,11 @@ const Player = () => {
           <div ref={seekBg} onClick={seekSong} className='w-[500px] bg-gray-300 rounded-full cursor-pointer'>
             <hr ref={seekBar} className='h-1 border-none w-0 bg-green-800 rounded-full' />
           </div>
-          <p>{time.totalTime.minute}:{time.totalTime.second}</p>
+          <p>{time.totalTime.minute 
+          ? time.totalTime.minute
+          : 0}:{time.totalTime.second
+          ? time.totalTime.second
+          : 0}</p>
         </div>
       </div>
       <div className='hidden lg:flex items-center gap-2 opacity-75'>

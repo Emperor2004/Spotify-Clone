@@ -5,7 +5,7 @@ import { useParams } from 'react-router-dom'
 import { assets } from '../assets/assets';
 import { PlayerContext } from '../context/PlayerContext';
 
-const DisplayAlbum = (album) => {
+const DisplayAlbum = ({album}) => {
 
     const {id} = useParams();
     const [albumData, setAlbumData] = useState("");
